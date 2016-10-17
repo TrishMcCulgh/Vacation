@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> 
+			/*css goes here*/
+		</style>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script>
+		function initialize() {
+		  var mapProp = {
+			center:new google.maps.LatLng(40.71278, -74.00594),
+			zoom:2,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=
+		   new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		  var parthMapProp = {
+			center:new google.maps.LatLng(40.71278, -74.00594),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var parthMap= new google.maps.Map(document.getElementById("parthenonMap"),parthMapProp);
+		   var madMapProp = {
+			center:new google.maps.LatLng(40.41677, -3.70379),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var madMap= new google.maps.Map(document.getElementById("madridMap"),madMapProp);
+		    var andMapProp = {
+			center:new google.maps.LatLng(42.50628, 1.5218),
+			zoom:15,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var andMap= new google.maps.Map(document.getElementById("andorraMap"),andMapProp); 
+		    var parMapProp = {
+			center:new google.maps.LatLng(48.85661, 2.35222),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var parMap= new google.maps.Map(document.getElementById("parisMap"),parMapProp); 
+		  var dubMapProp = {
+			center:new google.maps.LatLng(53.3498, -6.2603),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var dubMap= new google.maps.Map(document.getElementById("dublinMap"),dubMapProp); 
+		  var lonMapProp = {
+			center:new google.maps.LatLng(51.50735, -0.12775),
+			zoom:15,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var lonMap= new google.maps.Map(document.getElementById("londonMap"),lonMapProp); 
+		  var amsMapProp = {
+			center:new google.maps.LatLng(52.37021, 4.89516),
+			zoom:15,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var amsMap= new google.maps.Map(document.getElementById("amsterdamMap"),amsMapProp); 
+		  var berMapProp = {
+			center:new google.maps.LatLng(52.52, 13.40495),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var berMap= new google.maps.Map(document.getElementById("berlinMap"),berMapProp); 
+		  var romMapProp = {
+			center:new google.maps.LatLng(41.90278, 12.49636),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var romMap= new google.maps.Map(document.getElementById("romeMap"),romMapProp); 
+		  var mosMapProp = {
+			center:new google.maps.LatLng(55.75582, 37.6173),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var mosMap= new google.maps.Map(document.getElementById("moscowMap"),mosMapProp); 
+		  var losMapProp = {
+			center:new google.maps.LatLng(34.05223, -118.24368),
+			zoom:10,
+			mapTypeId:google.maps.MapTypeId.ROADMAL
+		  };
+		   var losMap= new google.maps.Map(document.getElementById("losangelesMap"),losMapProp);
+		  var NewYork = new google.maps.LatLng(40.71278, -74.00594);
+		  var Madrid = new google.maps.LatLng(40.71278, -74.00594);
+		  var Andorra = new google.maps.LatLng(42.50628, 1.5218);
+		  var Paris = new google.maps.LatLng(48.85661, 2.35222);
+		  var Dublin = new google.maps.LatLng(53.3498, -6.2603);
+		  var London = new google.maps.LatLng(51.50735, -0.12775);
+		  var Amsterdam = new google.maps.LatLng(52.37021, 4.89516);
+		  var Berlin = new google.maps.LatLng(52.52, 13.40495);
+		  var Rome = new google.maps.LatLng(41.90278, 12.49636);
+		  var Moscow = new google.maps.LatLng(55.75582, 37.6173);
+		  var LosAngeles = new google.maps.LatLng(34.05223, -118.24368);
+		  var myTrip = [NewYork, Madrid, Andorra, Paris, Dublin, London, Amsterdam, Berlin, Rome, Moscow, LosAngeles];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2
+});
+flightPath.setMap(map);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+			
+			
+			
+		</script>
+	</head>
+
+	<body>
+		<h1>My Vacation</h1>
+		<div id="googleMap" style="width:500px;height:500px;"></div>
+		<p>New York City will be my first stop. I thought I would go there to get 
+		my trip started with a place in my same country that I had never been to.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="parthenonMap" style="width:500px;height:500px;"></div>
+				<p>Madrid, Spain will be my second place.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="madridMap" style="width:500px;height:500px;"></div>
+				<p>Andorra, one of the smallest countrys in the world, will be my third stop.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="andorraMap" style="width:500px;height:500px;"></div>
+		<p>After that I will go to Paris France.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="parisMap" style="width:500px;height:500px;"></div>
+		<p>Arter Paris I will visit Dublin, Ireland.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="dublinMap" style="width:500px;height:500px;"></div>
+		<p>After Irland, I will go to London,UK.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="londonMap" style="width:500px;height:500px;"></div>
+		<p>After London I will go to Amsterdam, Netherlands.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="amsterdamMap" style="width:500px;height:500px;"></div>
+		<p>After Amsterdam, I will go to Berlin, Germany.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="berlinMap" style="width:500px;height:500px;"></div>
+		<p>After Berlin, I will go to Rome, Italy.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="romeMap" style="width:500px;height:500px;"></div>
+		<p>After Rome, I will go to Moscow.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="moscowMap" style="width:500px;height:500px;"></div>
+		<p>And finely I will go home, to Los Angeles, Califorina.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="losangelesMap" style="width:500px;height:500px;"></div>
+		<p>The totalcost of the trip will be about $16,380 in plane tickest alone.</p>
+		<!-- The second map div for the parthenon -->
+		<div id="losangelesMap" style="width:500px;height:500px;"></div>
+		
+	</body>
+
+</html>
